@@ -1,0 +1,60 @@
+extends ../layout.pug
+
+block content
+    h2 Editar un cliente - #{cliente.nombre}
+    form(action="/clientes/update", method="POST", novalidate)
+        .form-group.mb-4 
+            label.form-label Nombre
+            input.form-control(
+                type="text", 
+                placeholder="Introduce el nombre",
+                name="nombre",
+                value=cliente.nombre)
+        .form-group.mb-4
+            label.form-label Apellidos
+            input.form-control(
+                type="text", 
+                placeholder="Introduce los apellidos",
+                name="apellidos",
+                value=cliente.apellidos)
+        .form-group.mb-4 
+            label.form-label Email
+            input.form-control(
+                type="email", 
+                placeholder="Introduce el email",
+                name="email",
+                value=cliente.email)
+        .form-group.mb-4 
+            label.form-label Cuota
+            select.form-select(name="cuota", value=cliente.cuota)
+                option Elige tu cuota
+                option(value="9.99") Semanal (9.99€)
+                option(value="19.99") Mensual (19.99€)
+                option(value="79.99") Anual (79.99€)
+        .form-check.mb-4 
+            label.form-check-label Activo
+            input.form-check-input(
+                type="checkbox",
+                name="activo",
+                value=cliente.activo)
+        input(type="hidden", name="id", value=cliente._id)
+        input.btn.btn-block.btn-info(type="submit", value="Enviar")
+    script.
+        const cuota = "#{cliente.cuota}";
+        const activo = "#{cliente.activo}";
+        
+        // Recorro las opciones de cuota y selecciono la correcta
+        const options = document.querySelectorAll('.form-select option');
+        for(let option of options){
+            if(option.value === cuota){
+                option.selected = true;
+            }
+        }
+
+        // Marcar o no el checkbox activo
+        const checkBox = document.querySelector('.form-check-input');
+        if(activo === 'true'){
+            checkBox.checked = true;
+        }else{
+            checkBox.checked = false;
+        }

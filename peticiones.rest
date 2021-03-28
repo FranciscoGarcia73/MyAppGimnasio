@@ -1,0 +1,73 @@
+GET http://localhost:3000/api/clientes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDVmYjEzNjYzMTgxYTE1OTg2MmRmMDEiLCJjYWR1Y2EiOjE2MTc3NDU0MzUsImlhdCI6MTYxNjg4NTAzNX0.n_lmfwNmMOOFEqi-ljlbBLowhmBxnnfLBwxENXAvIVs
+
+###
+GET http://localhost:3000/api/teachers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc3OTE4NTQsImlhdCI6MTYxNjkyNzg1NH0.ZrvplFPa1rFbgMSLZXrqlH-Xnfe4M5Z6DiW1pNQui64
+
+
+
+###
+POST http://localhost:3000/api/clientes
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc3OTE4NTQsImlhdCI6MTYxNjkyNzg1NH0.ZrvplFPa1rFbgMSLZXrqlH-Xnfe4M5Z6DiW1pNQui64
+
+{
+    "nombre": "Francisco",
+    "apellidos": "Garcia",
+    "email": "fgarcia@gmail.com",
+    "cuota": 10,
+    "activo": true,
+    "dni": "25874112Z"
+}
+
+###
+POST http://localhost:3000/api/teachers
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc3OTE4NTQsImlhdCI6MTYxNjkyNzg1NH0.ZrvplFPa1rFbgMSLZXrqlH-Xnfe4M5Z6DiW1pNQui64
+
+{
+    "nombre": "Angel",
+    "apellidos": "Lopez",
+    "edad": 125,
+    "especialidad": "Quimicas"
+}
+
+
+
+
+
+###
+PUT http://localhost:3000/api/clientes/604bf7059c7167039825381c
+Content-Type: application/json
+
+{
+    "nombre" : "Ana",
+    "apellidos" : "González",
+    "email" : "anagon@gmail.com",
+    "cuota" : 20,
+    "activo" : true
+}
+
+###
+DELETE http://localhost:3000/api/clientes/604bf7059c7167039825381c
+
+###
+POST http://localhost:3000/api/usuarios/registro
+Content-Type: application/json
+
+{
+    "username": "Francisco",
+    "email": "fran@gmail.com",
+    "password": "holaMundo1234",
+    "rol": "ADMIN"
+}
+
+###
+POST http://localhost:3000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "email": "fran@gmail.com",
+    "password": "holaMundo1234"
+}
