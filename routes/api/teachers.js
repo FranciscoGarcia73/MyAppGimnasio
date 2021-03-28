@@ -34,6 +34,23 @@ router.post('/',checkAdmin , [
     }
 });
 
+router.put('/:idTeacher', async (req, res) => {
+    try {
+        const teacherEditado = await Teacher.findByIdAndUpdate(req.params.idTeacher, req.body, { new: true });
+        res.json(teacherEditado);
+    } catch (error) {
+        res.json({ error: error.message });
+    }
+});
 
+
+router.delete('/:idTeacher', checkAdmin, (req, res) => {
+    Teacher.findByIdAndRemove(req.params.idTeacher)
+        .then(teacherBorrado => {
+            res.json(teacherBorrado);
+        }).catch(error => {
+            res.json({ error: error.message });
+        });
+});
 
 module.exports = router;

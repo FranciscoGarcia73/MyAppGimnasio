@@ -3,20 +3,20 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDVmYjEz
 
 ###
 GET http://localhost:3000/api/teachers
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc3OTE4NTQsImlhdCI6MTYxNjkyNzg1NH0.ZrvplFPa1rFbgMSLZXrqlH-Xnfe4M5Z6DiW1pNQui64
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc4MTgyOTAsImlhdCI6MTYxNjk1NDI5MH0.Nmkcow0Pes6GqMarFfbwFFNFKiwWQf8dS0h7O1t4RPs
 
 
 
 ###
 POST http://localhost:3000/api/clientes
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc3OTE4NTQsImlhdCI6MTYxNjkyNzg1NH0.ZrvplFPa1rFbgMSLZXrqlH-Xnfe4M5Z6DiW1pNQui64
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwYzgyNDk1YjU2YTM4NmNjOGU2NmEiLCJjYWR1Y2EiOjE2MTc4MjA1MzAsImlhdCI6MTYxNjk1NjUzMH0.IeAuV4Jbvfrg-mc-CEdzPPNxSaHorz3IuhwX4zdyhPk
 
 {
     "nombre": "Francisco",
     "apellidos": "Garcia",
     "email": "fgarcia@gmail.com",
-    "cuota": 10,
+    "cuota": 11,
     "activo": true,
     "dni": "25874112Z"
 }
@@ -24,18 +24,14 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMw
 ###
 POST http://localhost:3000/api/teachers
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc3OTE4NTQsImlhdCI6MTYxNjkyNzg1NH0.ZrvplFPa1rFbgMSLZXrqlH-Xnfe4M5Z6DiW1pNQui64
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwYzgyNDk1YjU2YTM4NmNjOGU2NmEiLCJjYWR1Y2EiOjE2MTc4MjA1MzAsImlhdCI6MTYxNjk1NjUzMH0.IeAuV4Jbvfrg-mc-CEdzPPNxSaHorz3IuhwX4zdyhPk
 
 {
-    "nombre": "Angel",
-    "apellidos": "Lopez",
-    "edad": 125,
-    "especialidad": "Quimicas"
+    "nombre": "Pilar",
+    "apellidos": "Perez",
+    "edad": 25,
+    "especialidad": "Historia"
 }
-
-
-
-
 
 ###
 PUT http://localhost:3000/api/clientes/604bf7059c7167039825381c
@@ -50,16 +46,33 @@ Content-Type: application/json
 }
 
 ###
+PUT http://localhost:3000/api/teachers/6060b95afe231d244c163f94
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc3OTE4NTQsImlhdCI6MTYxNjkyNzg1NH0.ZrvplFPa1rFbgMSLZXrqlH-Xnfe4M5Z6DiW1pNQui64
+
+{
+   "nombre": "Pilar",
+    "apellidos": "Perez",
+    "edad": 25,
+    "especialidad": "Historia"
+}
+
+###
 DELETE http://localhost:3000/api/clientes/604bf7059c7167039825381c
+
+
+###
+DELETE http://localhost:3000/api/teachers/6060b8cc1a7085154c7617ea
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwYzgyNDk1YjU2YTM4NmNjOGU2NmEiLCJjYWR1Y2EiOjE2MTc4MjA1MzAsImlhdCI6MTYxNjk1NjUzMH0.IeAuV4Jbvfrg-mc-CEdzPPNxSaHorz3IuhwX4zdyhPk
 
 ###
 POST http://localhost:3000/api/usuarios/registro
 Content-Type: application/json
 
 {
-    "username": "Francisco",
-    "email": "fran@gmail.com",
-    "password": "holaMundo1234",
+    "username": "Cristina",
+    "email": "cristina@gmail.com",
+    "password": "holaMundo4321",
     "rol": "ADMIN"
 }
 
@@ -68,6 +81,6 @@ POST http://localhost:3000/api/usuarios/login
 Content-Type: application/json
 
 {
-    "email": "fran@gmail.com",
-    "password": "holaMundo1234"
+    "email": "cristina@gmail.com",
+    "password": "holaMundo4321"
 }

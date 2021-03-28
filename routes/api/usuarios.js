@@ -50,7 +50,6 @@ router.post('/login', async (req, res) => {
     });
     if (usuario) {
         // El email está en la BD
-        // console.log(usuario.password, req.body.password);
         // Comparo las password
         const iguales = bcrypt.compareSync(req.body.password, usuario.password);
         if (iguales) {
