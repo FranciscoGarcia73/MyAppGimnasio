@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+block content
+    h2 Editar un teacher - #{teacher.nombre}
+    form(action="/teachers/update", method="POST", novalidate)
+        .form-group.mb-4 
+            label.form-label Nombre
+            input.form-control(
+                type="text", 
+                placeholder="Introduce el nombre",
+                name="nombre",
+                value=teacher.nombre)
+        .form-group.mb-4
+            label.form-label Apellidos
+            input.form-control(
+                type="text", 
+                placeholder="Introduce los apellidos",
+                name="apellidos",
+                value=teacher.apellidos)
+        .form-group.mb-4 
+            label.form-label Edad
+            input.form-control(
+                type="number", 
+                placeholder="Introduce tu edad",
+                name="edad",
+                value=teacher.edad)
+        .form-group.mb-4 
+            label.form-label Especialidad
+            input.form-control(
+                type="text", 
+                placeholder="Introduce tu especialidad",
+                name="especialidad",
+                value=teacher.especialidad)
+            
+        input(type="hidden", name="id", value=teacher._id)
+        input.btn.btn-block.btn-info(type="submit", value="Enviar")

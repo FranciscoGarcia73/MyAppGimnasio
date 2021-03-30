@@ -1,0 +1,22 @@
+extends ../layout.pug
+
+block content
+    h2 Listado de teachers
+    table.table
+        thead
+            tr
+                th Nombre
+                th Apellidos 
+                th Edad 
+                th Especialidad
+                 th.text-center Acciones
+        tbody
+            each teacher in teachers
+                tr
+                    td= teacher.nombre
+                    td= teacher.apellidos
+                    td= teacher.edad
+                    td= teacher.especialidad
+                    td.text-center
+                        a.btn.btn-sm.btn-danger(href="/teachers/delete/"+teacher._id, onclick="return confirm('¿Estás seguro?')") Eliminar
+                        a.btn.btn-sm.btn-info.ml-1(href="/teachers/editar/"+teacher._id) Editar
