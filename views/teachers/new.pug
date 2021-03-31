@@ -2,7 +2,7 @@ extends ../layout.pug
 
 block content
     h2 Crear un nuevo teacher
-    form(action="/api/teachers", method="POST", novalidate)
+    form(action="/teachers/create", method="POST", novalidate)
         .form-group.mb-4 
             label.form-label Nombre
             input.form-control(
@@ -21,10 +21,10 @@ block content
                 type="number", 
                 placeholder="Introduce tu edad",
                 name="edad")
-        .form-check.mb-4 
+        .form-group.mb-4 
             label.form-label Especialidad
             input.form-control(
                 type="text", 
                 placeholder="Introduce tu especialidad",
                 name="especialidad")
-        input.btn.btn-block.btn-info(type="submit", value="Enviar")
+        input.btn.btn-block.btn-info(type="submit", value="Crear")
