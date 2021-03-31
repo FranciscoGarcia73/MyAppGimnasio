@@ -1,6 +1,12 @@
 extends ../layout.pug
 
 block content
+    nav.navbar.navbar-expand-lg.navbar-light.bg-dark.bg-gradient.mb-4
+        ul.navbar-nav.col-12
+            li.nav-item.col-6.text-center 
+                    a.btn.btn-light.text-dark(href="/teachers") Listado Teachers
+            li.nav-item.col-6.text-center 
+                a.btn.btn-light.text-dark(href="/teachers/new") Nuevo Teacher     
     h2 Crear un nuevo teacher
     form(action="/teachers/create", method="POST", novalidate)
         .form-group.mb-4 
