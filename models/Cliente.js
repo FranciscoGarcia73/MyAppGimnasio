@@ -48,5 +48,3 @@ clienteSchema.statics.activos = function () {
 
 module.exports = mongoose.model('cliente', clienteSchema);
 
-// Fat Model Skinny Controller
-// Dont Repeat Yourself

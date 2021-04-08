@@ -1,9 +1,9 @@
 GET http://localhost:3000/api/clientes
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDVmYjEzNjYzMTgxYTE1OTg2MmRmMDEiLCJjYWR1Y2EiOjE2MTc3NDU0MzUsImlhdCI6MTYxNjg4NTAzNX0.n_lmfwNmMOOFEqi-ljlbBLowhmBxnnfLBwxENXAvIVs
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwYzgyNDk1YjU2YTM4NmNjOGU2NmEiLCJjYWR1Y2EiOjE2MTg3MjcxMDksImlhdCI6MTYxNzg2MzEwOX0.maxJbaNFtARvAxHg8THPgXe6qEtXtP-3di57niL6eXo
 
 ###
 GET http://localhost:3000/api/teachers
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc4MTgyOTAsImlhdCI6MTYxNjk1NDI5MH0.Nmkcow0Pes6GqMarFfbwFFNFKiwWQf8dS0h7O1t4RPs
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwYzgyNDk1YjU2YTM4NmNjOGU2NmEiLCJjYWR1Y2EiOjE2MTg3MjcxMDksImlhdCI6MTYxNzg2MzEwOX0.maxJbaNFtARvAxHg8THPgXe6qEtXtP-3di57niL6eXo
 
 
 
@@ -46,14 +46,14 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/api/teachers/6060b95afe231d244c163f94
+PUT http://localhost:3000/api/teachers/6060c42c86f92c26ec0636ab
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDYwNWMwYzIzMDBmYjI5ODgzYTllOTIiLCJjYWR1Y2EiOjE2MTc3OTE4NTQsImlhdCI6MTYxNjkyNzg1NH0.ZrvplFPa1rFbgMSLZXrqlH-Xnfe4M5Z6DiW1pNQui64
 
 {
    "nombre": "Pilar",
     "apellidos": "Perez",
-    "edad": 25,
+    "edad": 35,
     "especialidad": "Historia"
 }
 
